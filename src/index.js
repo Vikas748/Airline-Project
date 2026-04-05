@@ -15,7 +15,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.listen(PORT,()=>{
     console.log(`server started on PORT ${PORT}`);
     const repo =new CityRepository();
-    repo.createCity({name:"Jabalpur"});
+    // repo.createCity({name:"Jabalpur"});
+    // repo.createCity({name:"Bhopal"});
     
 });
 }
