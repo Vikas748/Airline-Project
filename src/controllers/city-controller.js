@@ -87,7 +87,7 @@ const update=async(req,res)=>{
             data:{},
             success:false,
             message :"not able to Update the city",
-            err:error
+            err:error.message
         })
     }
 }
