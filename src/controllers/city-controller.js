@@ -1,4 +1,4 @@
-const {CityService, CityService}=require('../services/index');
+const {CityService}=require('../services/index');
 const cityService=new CityService(); //create an object
 
 /**
@@ -21,7 +21,7 @@ const create= async(req,res)=>{
         return res.status(500).json({
             data:{},
             success:false,
-            message :"not able tp Create a city",
+            message :"not able to Create a city",
             err:error
         })
 }}
@@ -41,7 +41,7 @@ const destroy=async (req,res)=>{
         return res.status(500).json({
             data:{},
             success:false,
-            message :"not able tp Delete the city",
+            message :"not able to Delete the city",
             err:error
         })
     }

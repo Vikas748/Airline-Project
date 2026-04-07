@@ -3,7 +3,7 @@ const {City}=require('../models/index')
 class CityRepository{
     async createCity({name}){ //{name:"Jabalpur"}
         try{
-            const city=await City.Create({
+            const city=await City.create({
                 name
             })
             return city;
