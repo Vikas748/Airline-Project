@@ -18,6 +18,7 @@ class CityRepository{
             const city=await City.destroy({
                 where: {id:cityID}
             })
+            return true;
         }
         catch(error){
             console.log("something went wrong in repository layer");
@@ -25,7 +26,7 @@ class CityRepository{
         }
 
     }
-    async updateCity({cityID,data}){
+    async updateCity({cityID,data}){ //{name:"Jabalpur"} --> data
         try{
             const city=City.update(data,{
                 where:{
