@@ -57,3 +57,5 @@ npx sequelize seed:generate --name add-airports
 
 ``` npx sequelize seed:generate --name add-airplanes
 ```
+
+```npx sequelize model:generate --name Flights --attributes flightNumber:String,airplaneId:integer,departureAirportId:integer,arrivalAirportId:integer,arrivalTime:Date,departureTime:Date,price:integer,boardingGate:String,totalSeats:integer```
