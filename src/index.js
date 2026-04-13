@@ -5,7 +5,7 @@ const ApiRoutes=require('./routes/index')
 
 const db=require('./models/index')
 
-const {Airport,City}=require('./models/index')
+const {Airplane}=require('./models/index')
 
 
 const setupAndStartServer= async()=>{
@@ -21,6 +21,9 @@ app.listen(PORT,async()=>{
     if(process.env.SYNC_DB){
         db.sequelize.sync({alter:true});
     }
+    await Airplane.create({
+        modelNumber:'Bombardier CRJ'
+    });
     
 });
 }

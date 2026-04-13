@@ -43,9 +43,17 @@ Relationship -> City has many airports and Airport belongs to a city (one to man
 ``` npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
 ```
 
-```
+``` 
 npx sequelize seed:generate --name add-airports
 ```
 
 ```npx sequelize db:seed:all
+```
+
+``` npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer
+```
+
+```npx sequelize db:migrate```
+
+``` npx sequelize seed:generate --name add-airplanes
 ```
