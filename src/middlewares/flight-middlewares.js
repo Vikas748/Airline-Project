@@ -1,3 +1,4 @@
+const { ClintErrorCodes }=require('../utils/error-codes');
 const ValidateCreateFlight =(req,res,next)=>{
     if(
         !req.body.flightNumber ||
@@ -9,7 +10,7 @@ const ValidateCreateFlight =(req,res,next)=>{
         !req.body.price 
     ) {
         //if any of body params is missing we come inside the if
-        return res.status(400).json({
+        return res.status(ClintErrorCodes.BAD_REQUEST).json({
             data :{},
             success:false,
             message:"Invalid request body for create flight",
